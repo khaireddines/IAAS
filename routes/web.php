@@ -23,9 +23,13 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
-
+Route::get('nextpage',function (){
+    return Inertia::render('Dashboard/nextpage');
+})->name('nextpage');
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard/Dashboard');
+    return Inertia::render('Dashboard/Dashboard',[
+        'next' => \Illuminate\Support\Facades\URL::route('nextpage')
+    ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
