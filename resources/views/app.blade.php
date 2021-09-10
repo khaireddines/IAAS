@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
+        <link rel="stylesheet" media="screen and (device-height: 600px)" />
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
@@ -12,7 +12,17 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                width: 100%;
+                min-height: 100vh;
+            }
+        </style>
         <!-- Scripts -->
         @routes
         <script src="{{ mix('js/app.js') }}" defer></script>

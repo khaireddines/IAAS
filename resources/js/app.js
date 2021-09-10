@@ -15,7 +15,7 @@ createInertiaApp({
     setup({ el, App, props }) {
         return render(
             <Provider store={Store}>
-                <App {...props} />
+                <App {...props}  />
             </Provider>
             , el);
     },

@@ -9,9 +9,19 @@ export default function Authenticated({ auth, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
 
     return (
+        <>
+        {/*<div
+            className="h-screen fixed top-0 md:left-0 -left-64 overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300">
+            <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative"><a
+                href="https://material-tailwind.com?ref=mtd" target="_blank" rel="noreferrer"
+                className="mt-2 text-center w-full inline-block"><h1
+                className="text-gray-900 text-xl font-serif font-bold leading-normal mt-0 mb-2">Material
+                Tailwind</h1></a>
+            </div>
+        </div>*/}
         <div className="min-h-screen bg-gray-100">
             <nav className="bg-white border-b border-gray-100">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className=" mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
                         <div className="flex">
                             <div className="flex-shrink-0 flex items-center">
@@ -20,11 +30,14 @@ export default function Authenticated({ auth, header, children }) {
                                 </Link>
                             </div>
 
-                            <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            {/*<div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
                                     Dashboard
                                 </NavLink>
-                            </div>
+                                <NavLink href={route('nextpage')} active={route().current('nextpage')}>
+                                    Next
+                                </NavLink>
+                            </div>*/}
                         </div>
 
                         <div className="hidden sm:flex sm:items-center sm:ml-6">
@@ -94,6 +107,9 @@ export default function Authenticated({ auth, header, children }) {
                         <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
                             Dashboard
                         </ResponsiveNavLink>
+                        <ResponsiveNavLink href={route('nextpage')} active={route().current('nextpage')}>
+                            Next
+                        </ResponsiveNavLink>
                     </div>
 
                     <div className="pt-4 pb-1 border-t border-gray-200">
@@ -116,8 +132,10 @@ export default function Authenticated({ auth, header, children }) {
                     <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">{header}</div>
                 </header>
             )}
-
-            <main>{children}</main>
+            <main>
+                {children}
+            </main>
         </div>
+        </>
     );
 }

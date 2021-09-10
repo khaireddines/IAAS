@@ -1436,6 +1436,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function Authenticated(_ref) {
   var auth = _ref.auth,
       header = _ref.header,
@@ -1446,137 +1447,136 @@ function Authenticated(_ref) {
       showingNavigationDropdown = _useState2[0],
       setShowingNavigationDropdown = _useState2[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-    className: "min-h-screen bg-gray-100",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("nav", {
-      className: "bg-white border-b border-gray-100",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-        className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-          className: "flex justify-between h-16",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "flex",
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      className: "min-h-screen bg-gray-100",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("nav", {
+        className: "bg-white border-b border-gray-100",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          className: " mx-auto px-4 sm:px-6 lg:px-8",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            className: "flex justify-between h-16",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-              className: "flex-shrink-0 flex items-center",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.Link, {
-                href: "/",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_ApplicationLogo__WEBPACK_IMPORTED_MODULE_1__["default"], {
-                  className: "block h-9 w-auto text-gray-500"
+              className: "flex",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                className: "flex-shrink-0 flex items-center",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.Link, {
+                  href: "/",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_ApplicationLogo__WEBPACK_IMPORTED_MODULE_1__["default"], {
+                    className: "block h-9 w-auto text-gray-500"
+                  })
                 })
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-              className: "hidden space-x-8 sm:-my-px sm:ml-10 sm:flex",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_NavLink__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                href: route('dashboard'),
-                active: route().current('dashboard'),
-                children: "Dashboard"
+              className: "hidden sm:flex sm:items-center sm:ml-6",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                className: "ml-3 relative",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_Components_Basic_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"].Trigger, {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                      className: "inline-flex rounded-md",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
+                        type: "button",
+                        className: "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150",
+                        children: [auth.user.name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
+                          className: "ml-2 -mr-0.5 h-4 w-4",
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20",
+                          fill: "currentColor",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                            fillRule: "evenodd",
+                            d: "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z",
+                            clipRule: "evenodd"
+                          })
+                        })]
+                      })
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"].Content, {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"].Link, {
+                      href: route('logout'),
+                      method: "post",
+                      as: "button",
+                      children: "Log Out"
+                    })
+                  })]
+                })
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+              className: "-mr-2 flex items-center sm:hidden",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+                onClick: function onClick() {
+                  return setShowingNavigationDropdown(function (previousState) {
+                    return !previousState;
+                  });
+                },
+                className: "inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
+                  className: "h-6 w-6",
+                  stroke: "currentColor",
+                  fill: "none",
+                  viewBox: "0 0 24 24",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                    className: !showingNavigationDropdown ? 'inline-flex' : 'hidden',
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeWidth: "2",
+                    d: "M4 6h16M4 12h16M4 18h16"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                    className: showingNavigationDropdown ? 'inline-flex' : 'hidden',
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeWidth: "2",
+                    d: "M6 18L18 6M6 6l12 12"
+                  })]
+                })
               })
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-            className: "hidden sm:flex sm:items-center sm:ml-6",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-              className: "ml-3 relative",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_Components_Basic_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"], {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"].Trigger, {
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                    className: "inline-flex rounded-md",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
-                      type: "button",
-                      className: "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150",
-                      children: [auth.user.name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
-                        className: "ml-2 -mr-0.5 h-4 w-4",
-                        xmlns: "http://www.w3.org/2000/svg",
-                        viewBox: "0 0 20 20",
-                        fill: "currentColor",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
-                          fillRule: "evenodd",
-                          d: "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z",
-                          clipRule: "evenodd"
-                        })
-                      })]
-                    })
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"].Content, {
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"].Link, {
-                    href: route('logout'),
-                    method: "post",
-                    as: "button",
-                    children: "Log Out"
-                  })
-                })]
-              })
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-            className: "-mr-2 flex items-center sm:hidden",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-              onClick: function onClick() {
-                return setShowingNavigationDropdown(function (previousState) {
-                  return !previousState;
-                });
-              },
-              className: "inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("svg", {
-                className: "h-6 w-6",
-                stroke: "currentColor",
-                fill: "none",
-                viewBox: "0 0 24 24",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
-                  className: !showingNavigationDropdown ? 'inline-flex' : 'hidden',
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: "2",
-                  d: "M4 6h16M4 12h16M4 18h16"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
-                  className: showingNavigationDropdown ? 'inline-flex' : 'hidden',
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: "2",
-                  d: "M6 18L18 6M6 6l12 12"
-                })]
-              })
-            })
-          })]
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-        className: (showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden',
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-          className: "pt-2 pb-3 space-y-1",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__["default"], {
-            href: route('dashboard'),
-            active: route().current('dashboard'),
-            children: "Dashboard"
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-          className: "pt-4 pb-1 border-t border-gray-200",
+          className: (showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden',
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "px-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-              className: "font-medium text-base text-gray-800",
-              children: auth.user.name
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-              className: "font-medium text-sm text-gray-500",
-              children: auth.user.email
+            className: "pt-2 pb-3 space-y-1",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__["default"], {
+              href: route('dashboard'),
+              active: route().current('dashboard'),
+              children: "Dashboard"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__["default"], {
+              href: route('nextpage'),
+              active: route().current('nextpage'),
+              children: "Next"
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-            className: "mt-3 space-y-1",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__["default"], {
-              method: "post",
-              href: route('logout'),
-              as: "button",
-              children: "Log Out"
-            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            className: "pt-4 pb-1 border-t border-gray-200",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+              className: "px-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                className: "font-medium text-base text-gray-800",
+                children: auth.user.name
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                className: "font-medium text-sm text-gray-500",
+                children: auth.user.email
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+              className: "mt-3 space-y-1",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_Basic_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                method: "post",
+                href: route('logout'),
+                as: "button",
+                children: "Log Out"
+              })
+            })]
           })]
         })]
+      }), header && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("header", {
+        className: "bg-white shadow",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          className: "max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8",
+          children: header
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("main", {
+        children: children
       })]
-    }), header && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("header", {
-      className: "bg-white shadow",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-        className: "max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8",
-        children: header
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("main", {
-      children: children
-    })]
+    })
   });
 }
 
@@ -1600,17 +1600,35 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Layouts_Authenticated__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    auth: props.auth,
-    errors: props.errors,
-    header: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
-      className: "font-semibold text-xl text-gray-800 leading-tight",
-      children: "Next Page"
-    }),
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      children: "hello here"
-    })
+  var myclass = "hidden shadow-2xl w-72 md:block bg-white left-0 z-10";
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    className: "flex min-h-screen",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: myclass,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "flex flex-col flex-auto flex-grow mx-auto bg-gray-100",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "h-16 border-b shadow bg-white",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "flex-auto flex-1 space-y-4 p-4",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+          className: "",
+          children: "Container"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "h-4/5 bg-white shadow rounded-l",
+          children: "dsfds"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "h-10 border-t-2 shadow bg-white",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+          className: "h-full inline-block align-text-bottom"
+        })
+      })]
+    })]
   });
 });
 

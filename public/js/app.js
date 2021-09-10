@@ -60842,7 +60842,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.3","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Auth_ConfirmPassword_js":"249142961188cf521a62","resources_js_Pages_Auth_ForgotPassword_js":"f2115628426dc272a768","resources_js_Pages_Auth_Login_js":"806bff1e62eafc29c0b0","resources_js_Pages_Auth_Register_js":"b52416c4e5bab1b8c7fd","resources_js_Pages_Auth_ResetPassword_js":"8b97de7167007efd6851","resources_js_Pages_Auth_VerifyEmail_js":"31413fb2c6824dee524d","resources_js_Pages_Dashboard_Dashboard_js":"6b105047fd58155563f6","resources_js_Pages_Dashboard_nextpage_js":"43ae3626b464e9143f4d","resources_js_Pages_Welcome_js":"094a4c59ac009ce1ca1d"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Auth_ConfirmPassword_js":"249142961188cf521a62","resources_js_Pages_Auth_ForgotPassword_js":"f2115628426dc272a768","resources_js_Pages_Auth_Login_js":"806bff1e62eafc29c0b0","resources_js_Pages_Auth_Register_js":"b52416c4e5bab1b8c7fd","resources_js_Pages_Auth_ResetPassword_js":"8b97de7167007efd6851","resources_js_Pages_Auth_VerifyEmail_js":"31413fb2c6824dee524d","resources_js_Pages_Dashboard_Dashboard_js":"2e2e6db6d43a9d456329","resources_js_Pages_Dashboard_nextpage_js":"a02c8ebe78e639d20c2e","resources_js_Pages_Welcome_js":"094a4c59ac009ce1ca1d"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
