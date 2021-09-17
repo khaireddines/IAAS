@@ -13,12 +13,16 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            flexGrow: {
+                '2': 2
+            }
         },
     },
 
     variants: {
         extend: {
             opacity: ['disabled'],
+            width: ['hover']
         },
     },
 
